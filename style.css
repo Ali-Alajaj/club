@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  background-image:linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),url(thumbnail.jpg) ;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-color: rgba(177, 50, 50, 0.543);
+  font-family: Noto Kufi Arabic;
+}
+
+.main-header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(15, 38, 61);
+  font-family: Noto Kufi Arabic;
+  align-items: center;
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.right-section p {
+  font-size: 22px;
+  margin: none;
+  color: white;
+  margin-right: 30px;
+}
+.right-section span {
+  color: gold;
+  font-weight: bold;
+}
+.logo {
+  width: 100px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.left-section {
+  display: flex;
+  color: white;
+  padding-left: 30px;
+  align-items: center;
+}
+.shop {color: orange;}
+.current-page {color: gold;}
+.left-section p {
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.left-section p:hover {
+  border-bottom: solid gold 1px;
+  margin: 0;
+  padding: 0 15px;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcome-message p {
+  margin: 0;
+  color: gold;
+  font-size: 75px;
+  font-weight: bold;
+}
+
+.register {
+  background-color: rgb(170, 151, 76);
+  color: white;
+  padding: 10px 50px;
+  font-size: 19px;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.register:hover {
+  background-color: rgb(230, 199, 73);
+  font-weight: bold;
+}
+
+.hamburger-menu-icon {width: 40px;}
+
+.hamburger-menu {
+  display: none;
+  align-items: center;
+  border: solid rgb(0, 101, 141);
+  height: 40px;
+  padding: 13px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.menu {
+  position: fixed;
+  background-color: rgb(0, 101, 141);
+  padding-top: 40px;
+  color: white;
+  width: 100%;
+  padding-top: 80px;
+  display: none;
+}
+
+.menu p {
+  margin: 0;
+  margin-bottom: -1px;
+  text-align: center;
+  border: solid white;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu p:hover {
+  background-color: rgb(0, 56, 78);
+}
+
+.images-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin-top: 200px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.images-grid img {
+  width: 100%;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.train {
+  color: gold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.images-grid img:hover {
+  width: 105%;
+  z-index: 2;
+  box-shadow: 0 0 60px white;
+}
+
+.x-icon {height:40px;margin-top:3px;}
+.remove-menu {
+  position: absolute;
+  top: 5px;
+  background-color: rgb(77, 179, 219);
+  width: 60px;
+  height: 60px;
+  border: solid rgb(14, 24, 24) 4px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ok {
+  border: none;
+  background-color: red;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  margin: 10px 10px;
+  font-size: 20px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.image-displayer {
+  z-index: 10;
+  width: 85%;
+  height: 85%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 40px white;
+  display: none;
+}
+
+.image-displayer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bottom-logo-container {
+  height: 280px;
+  background-color: rgb(15, 37, 60);
+  color: white;
+}
+
+.bottom-logo {height: 100%;width: 100%;object-fit: contain;}
+
+.visible {display: inherit;}
+
+@media (max-width: 989px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  .left-section {display: none;}
+
+  header {display: none;}
+}
